@@ -7,11 +7,11 @@ from openai import OpenAI
 from gtts import gTTS
 import pygame
 import os
-
+#first of install pip install all these libraries
 recognizer=sr.Recognizer()
 engine=pyttsx3.init()
 newsapi = "<YOUR API KEY>"
-
+#enter your news API key which is easily avaiable and free to use
 def speak_old(text):
     engine.say(text)
     engine.runAndWait()
@@ -35,7 +35,7 @@ def speak(text):
     os.remove("temp.mp3")
 
 def aiProcess(command):
-    client = OpenAI(api_key="<Your Key Here>",
+    client = OpenAI(api_key="<Your Key Here>", #this key is paid as enter you API key
     )
 
     completion = client.chat.completions.create(
